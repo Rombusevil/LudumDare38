@@ -10,7 +10,7 @@ import org.flixel.event.IFlxTimer;
  * Created by rombus on 22/04/17.
  */
 public class Passenger extends FlxSprite {
-    public static final int HEIGHT = 20, WIDTH =10;
+    public static final int HEIGHT = 29, WIDTH =40;
     private float timeToDie = 8f;               // Time of existence if the bus doesn't pick this passenger up
     private float deltaToFlicker = 0.5f;        //  timeToDie - deltaToFlicker = timeToFlicker
     private FlxTimer deathTimer, flickerTimer;
@@ -22,7 +22,10 @@ public class Passenger extends FlxSprite {
         flickerTimer = new FlxTimer();
 
         // SETUP
-        makeGraphic(WIDTH, HEIGHT, FlxG.PINK, true);
+//        makeGraphic(WIDTH, HEIGHT, FlxG.PINK, true);
+        loadGraphic("passengers_29x40.png", true, true, 29, 40);
+        addAnimation("idle", new int[]{0,1}, 5, true);
+        play("idle");
         kill();
 
 

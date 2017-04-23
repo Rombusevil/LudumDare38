@@ -77,8 +77,13 @@ public class PassengerMan {
         float tmpX, tmpY;
         do {
             // Randomize position
-            tmpX = FlxG.random() * FlxG.width;
-            tmpY = FlxG.random() * FlxG.height;
+
+//            This are the limits that I have hardcoded on Hero class, I'll use the same here, sort of...
+//            int xLeftOffset = 19, xRightOffset = FlxG.width -(FlxG.width - 1149), yTopOffset = 4, yBottomOffset=  FlxG.height - (FlxG.height - 591);
+            int xRightOffset = FlxG.width - (FlxG.width - 1149);
+            int yBottomOffset = FlxG.height - (FlxG.height - 591);
+            tmpX = FlxG.random() * xRightOffset;
+            tmpY = FlxG.random() * yBottomOffset;
 
             // Make sure it's not too close to the screen borders
             if(tmpX >= (FlxG.width - SIDES_OFFSETS)){

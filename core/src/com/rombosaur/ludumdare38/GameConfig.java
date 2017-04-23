@@ -5,7 +5,7 @@ package com.rombosaur.ludumdare38;
  * 
  */
 public class GameConfig {
-    public static final boolean DEBUG = true;
+    public static final boolean DEBUG = false;
     public static final String TITLE = "BUS DRIVER";
 
     public static final int GAME_WIDTH = 1200;
